@@ -22,7 +22,7 @@ from .utils import (
     pad_image,
 )
 
-
+# 更改编码顺序可以在这里修改
 def encode(image: np.ndarray, quality=50):
     height, width = image.shape
     image = pad_image(image)
