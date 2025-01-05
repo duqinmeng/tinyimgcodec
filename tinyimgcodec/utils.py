@@ -11,6 +11,7 @@ def bits_required(x):
 
 
 def block_slice(image: np.ndarray, kernel_size: tuple):
+    """ 作用：将图像切分成多个小块 """
     img_height, img_width = image.shape
     tile_height, tile_width = kernel_size
     tiled_array = image.reshape(
@@ -54,6 +55,7 @@ def block_quantize(coeffs: np.ndarray, quality=50, inverse=False):
 
 
 def pad_image(im: np.ndarray):
+    """ 作用是对图像进行填充，使得其高和宽都是8的倍数 """
     height, width = im.shape
     height = math.ceil(height / 8) * 8
     width = math.ceil(width / 8) * 8
